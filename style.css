@@ -1,0 +1,108 @@
+body {
+  position: relative;
+  text-align: center;
+  background-color: #596982;
+}
+
+h1 {
+  font-size: 70px;
+}
+
+.buttonStyle {
+  background-color: #008CBA; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.toast {
+  height: 50px;
+  padding-top: 20px;
+  padding-right: 50px;
+  padding-left: 50px;
+  box-shadow: -10px -10px 5px 0px gray;
+  margin: 0 auto;
+  font-size: 20px;
+  text-align: center;
+  justify-content: center;
+}
+
+.top {
+  position: absolute;
+  left: 50%;
+  top: -200px;
+  margin-left: -25px;
+}
+
+.bottom {
+  position: fixed;
+  left: 50%;
+  margin-left: -25px;
+  bottom: -200px;
+}
+
+#button-flexbox {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: space-around;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 25%;
+}
+
+.animateEnterTop {
+  animation: enterToastTop 1000ms 0s forwards;
+}
+
+.animateExitTop {
+  animation: exitToastTop 1000ms 1000ms backwards;
+}
+
+.animateEnterBottom {
+  animation: enterToastBottom 1000ms 0s forwards;
+}
+
+.animateExitBottom {
+  animation: exitToastBottom 1000ms 1000ms backwards;
+}
+
+@keyframes enterToastTop {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(300px);
+  }
+}
+
+@keyframes exitToastTop {
+  from {
+    transform: translateY(300px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes enterToastBottom {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(-300px);
+  }
+}
+
+@keyframes exitToastBottom {
+  from {
+    transform: translateY(-300px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
