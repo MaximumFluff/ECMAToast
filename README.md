@@ -7,7 +7,7 @@ This was a test project to create a lightweight toast system using no external d
 Create a new Toast object like so
 ```
 const newToast = new Toast({
-  position: top | bottom
+  position: 'top' | 'bottom'
   colour: valid CSS value
   message: string
   id: string
@@ -16,6 +16,6 @@ const newToast = new Toast({
 })
 ```
 
-Then you can use ` newToast.returnNode ` to get the value of the HTML node for the toast, which you can then attach to the ` <body></body> `
+Once you create the new toast object, a method automatically fires that attaches the Toast to the ` <body></body> ` of your HTML document.
 
 The object contains a ` newToast.fireToast() ` function that activates the toast, which you can add to an EventListener attached to a button, for example
